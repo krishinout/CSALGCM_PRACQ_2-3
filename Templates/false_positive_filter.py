@@ -1,7 +1,7 @@
 def keep_pair(w1, w2, c1, c2, dist, dict_words=None, min_len=4, max_ratio=50):
     # returns True if the pair should be kept
     
-    # if too short (e.g., opo/upo)
+    # if too short
     if min(len(w1), len(w2)) < min_len:
         return False
 
