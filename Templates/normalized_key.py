@@ -1,10 +1,9 @@
-import re
+from alteration_checker import NORMALIZE_TABLE
 from collections import defaultdict
 
 def normalize_key(word):
-    # changes o/u to o and e/i to e to group likely variants
-    word = re.sub(r'[ou]', 'o', word)
-    return re.sub(r'[ei]', 'e', word)
+    # merges all the pairs to one letter for grouping
+    return word.translate(NORMALIZE_TABLE)
 
 def key_candidates(vocab):
     # groups pairs of words that share the same normalized key

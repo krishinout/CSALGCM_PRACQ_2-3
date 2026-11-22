@@ -1,6 +1,5 @@
-# list of letters commonly swapped in spelling variants
-CHEAP_PAIRS = {frozenset("ou"), frozenset("ei")}
-
+from alteration_checker import ALLOWED_SWAPS as CHEAP_PAIRS
+# para sa mga letters na commonly swapped
 """
     Adds costs for alterations/ letter swaps
     1. same letter - 0
@@ -58,6 +57,3 @@ def edit_with_diff(s1, s2, max_len_diff=1):
 
     return dp[m][n], diffs[::-1]
 
-#sample
-print(edit_with_diff("politiko", "pulitiko"))   # (0.5, ['o vs. u'])
-print(edit_with_diff("opo", "upo"))             # (0.5, ['o vs. u'])

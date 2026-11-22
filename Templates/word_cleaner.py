@@ -15,5 +15,3 @@ def count_words(path):
             counts.update(tokenize(line))
     return counts
 
-print(tokenize("Ang Politiko ay mag-aaral, 123 pulitiko!"))
-# ['ang', 'politiko', 'ay', 'mag-aaral', 'pulitiko']
