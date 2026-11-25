@@ -9,7 +9,7 @@ from csv_writer import write_pairs_to_csv
 
 INPUT_FILE = "Raw.txt"
 OUTPUT_FILE = "variants.csv"
-DICT_FILE = None
+DICT_FILE = "tagalog_dict.txt"
 MIN_FILE = None
 MIN_LEN = 4 #shortest word the pwede
 MAX_RATIO = 50 #max freq ratio between the two words
