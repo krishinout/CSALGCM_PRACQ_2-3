@@ -85,3 +85,7 @@ def keep_pair(w1, w2, c1, c2, dist, dict_words=None, min_len=4, max_ratio=50,
             return False
 
     return True
+
+def hyphen_variant(w1, w2):
+    # returns True if w1 and w2 differ ONLY by hyphens  
+    return w1.replace("-", "") == w2.replace("-", "")
