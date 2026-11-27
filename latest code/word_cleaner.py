@@ -2,7 +2,7 @@ import re
 from collections import Counter
 
 # A word = letters, optionally joined by a hyphen or apostrophe
-# e.g. "mag-aral", "isa't" stay as single tokens
+# like for example "mag-aral", "isa't" stay as single tokens
 WORD_RE = re.compile(r"[^\W\d_]+(?:[-'’][^\W\d_]+)*")
 
 def tokenize(text):
@@ -17,7 +17,7 @@ def count_words(path):
 
 def count_capitalized_mid_sentence(path):
     # counts how many times each word appears MID-SENTENCE and capitalized
-    # (i.e. not the first word of a sentence/line)
+    # (like if not the first word of a sentence/line)
     # returns dict: word_lower -> count
     mid_caps = Counter()
     with open(path, encoding="utf-8") as f:
